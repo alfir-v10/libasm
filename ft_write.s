@@ -1,4 +1,4 @@
-extern __error
+extern ___error
 
 global _ft_write
 
@@ -12,7 +12,7 @@ _ft_write:
 
 .err
 	push	rax
-	call	__error
+	call	___error
 	pop		qword [rax]
 	mov		rax, -1
 	ret

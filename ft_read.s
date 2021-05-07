@@ -1,10 +1,10 @@
-extern __error
+extern ___error
 
 global _ft_read
 
 section .text
 
-_ft_read_:
+_ft_read:
 	mov rax, 0x02000003
 	syscall
 	jc .error
@@ -12,7 +12,7 @@ _ft_read_:
 
 .error:
 	push	rax
-	call	__error
+	call	___error
 	pop		qword [rax]
 	mov		rax, -1
 	ret
